@@ -4,13 +4,14 @@
 	"description": "Edit ServiceNow components from VSCode.",
 	"version": "1.0.0",
 	"license": "GPL-3.0-only",
-    "icon": "./data/icon.png",
+	"icon": "./data/icon.png",
+	"publisher": "GelaniNijraj",
 	"repository": {
         "type": "git",
         "url": "https://github.com/GelaniNijraj/IglooReloaded"
     },
 	"engines": {
-		"vscode": "^1.32.0"
+		"vscode": "^1.37.0"
 	},
 	"categories": [
 		"Other"
