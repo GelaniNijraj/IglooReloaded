@@ -1,0 +1,335 @@
+[
+    {
+        "name": "Server Development",
+        "type": "directory",
+        "contains": [
+            {
+                "name": "Scheduled Scripts",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sysauto_script",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "Business Rules",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_script",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "Script Includes",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_script_include",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "UI Actions",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_ui_action",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "Processor",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_processor",
+                        "query": "type=script",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "Scheduled Script Execution",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sysauto_script",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "Script Action",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sysevent_script_action",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "Fix Script",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_script_fix",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Service Catalog",
+        "type": "directory",
+        "contains": [
+            {
+                "name": "Record Producer",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sc_cat_item_producer",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "Catalog Client Scripts",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "catalog_script_client",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Client Development",
+        "type": "directory",
+        "contains": [
+            {
+                "name": "Client Scripts",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_script_client",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "UI Scripts",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_ui_script",
+                        "name": "script_name",
+                        "content": "script"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Content Management",
+        "type": "directory",
+        "contains": [
+            {
+                "name": "Content Blocks - Programmatic",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "xml",
+                        "table": "content_block_programmatic",
+                        "name": "name",
+                        "content": "programmatic_content"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Forms & UI",
+        "type": "directory",
+        "contains": [
+            {
+                "name": "UI Pages",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "directories",
+                        "table": "sys_ui_page",
+                        "name": "name",
+                        "contains": [
+                            {
+                                "type": "file",
+                                "ext": "js",
+                                "name": "client_script",
+                                "table": "current",
+                                "content": "client_script"
+                            },
+                            {
+                                "type": "file",
+                                "ext": "html",
+                                "name": "page",
+                                "table": "current",
+                                "content": "html"
+                            },
+                            {
+                                "type": "file",
+                                "ext": "js",
+                                "name": "processing_script",
+                                "table": "current",
+                                "content": "processing_script"
+                            },
+                            {
+                                "type": "json",
+                                "name": "config",
+                                "table": "current",
+                                "fields": "sys_id,name"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "UI Macros",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "xml",
+                        "table": "sys_ui_macro",
+                        "name": "name",
+                        "content": "xml"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Inbound Integrations",
+        "type": "directory",
+        "contains": [
+            {
+                "name": "Transform Maps",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "directories",
+                        "ext": "js",
+                        "table": "sys_transform_map",
+                        "name": "name",
+                        "contains": [
+                            {
+                                "type": "file",
+                                "ext": "js",
+                                "table": "current",
+                                "name": "main",
+                                "content": "script"
+                            },
+                            {
+                                "type": "files",
+                                "ext": "js",
+                                "table": "sys_transform_script",
+                                "query": "map=${sys_id}",
+                                "name": "when",
+                                "content": "script"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Scripted REST Resource",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "sys_ws_operation",
+                        "name": "name",
+                        "content": "operation_script"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "MID Server",
+        "type": "directory",
+        "contains": [
+            {
+                "name": "MID Server Script Includes",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "ecc_agent_script_include",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            },
+            {
+                "name": "MID Server Script File",
+                "type": "directory",
+                "contains": [
+                    {
+                        "type": "files",
+                        "ext": "js",
+                        "table": "ecc_agent_script_file",
+                        "name": "name",
+                        "content": "script"
+                    }
+                ]
+            }
+        ]
+    }
+]

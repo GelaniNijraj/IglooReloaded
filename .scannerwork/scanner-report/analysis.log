@@ -1,0 +1,155 @@
+Environment variables:
+  - =C:=C:\Users\nijraj.gelani\Documents\iglooreloaded
+  - ALLUSERSPROFILE=C:\ProgramData
+  - APPDATA=C:\Users\nijraj.gelani\AppData\Roaming
+  - COMPUTERNAME=W171-NIJRAJG
+  - ComSpec=C:\WINDOWS\system32\cmd.exe
+  - CommonProgramFiles=C:\Program Files\Common Files
+  - CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+  - CommonProgramW6432=C:\Program Files\Common Files
+  - DriverData=C:\Windows\System32\Drivers\DriverData
+  - ERROR_CODE=0
+  - FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+  - FPS_BROWSER_USER_PROFILE_STRING=Default
+  - HOMEDRIVE=C:
+  - HOMEPATH=\Users\nijraj.gelani
+  - JAVA_EXEC="C:\sonar-scanner-3.3.0.1492-windows\bin\..\jre\bin\java.exe"
+  - JAVA_HOME=C:\sonar-scanner-3.3.0.1492-windows\bin\..\jre
+  - LANG=en_US.UTF-8
+  - LOCALAPPDATA=C:\Users\nijraj.gelani\AppData\Local
+  - LOGONSERVER=\\CDSDC01
+  - NUMBER_OF_PROCESSORS=8
+  - OS=Windows_NT
+  - OneDrive=C:\Users\nijraj.gelani\OneDrive
+  - PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+  - PROCESSOR_ARCHITECTURE=AMD64
+  - PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
+  - PROCESSOR_LEVEL=6
+  - PROCESSOR_REVISION=8e0b
+  - PROJECT_HOME=C:\Users\nijraj.gelani\Documents\iglooreloaded
+  - PROMPT=$P$G
+  - PSModulePath=C:\Users\nijraj.gelani\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+  - PUBLIC=C:\Users\Public
+  - Path=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Users\Crest\AppData\Local\Programs\Python\Python37-32;C:\Users\Crest\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\nijraj.gelani\AppData\Local\Microsoft\WindowsApps;
+  - ProgramData=C:\ProgramData
+  - ProgramFiles=C:\Program Files
+  - ProgramFiles(x86)=C:\Program Files (x86)
+  - ProgramW6432=C:\Program Files
+  - SESSIONNAME=Console
+  - SONAR_SCANNER_HOME=C:\sonar-scanner-3.3.0.1492-windows\bin\..
+  - SystemDrive=C:
+  - SystemRoot=C:\WINDOWS
+  - TEMP=C:\Users\NIJRAJ~1.GEL\AppData\Local\Temp
+  - TERM_PROGRAM=vscode
+  - TERM_PROGRAM_VERSION=1.36.1
+  - TMP=C:\Users\NIJRAJ~1.GEL\AppData\Local\Temp
+  - USERDNSDOMAIN=CDSYS.LOCAL
+  - USERDOMAIN=CDSYS
+  - USERDOMAIN_ROAMINGPROFILE=CDSYS
+  - USERNAME=nijraj.gelani
+  - USERPROFILE=C:\Users\nijraj.gelani
+  - scriptdir=C:\sonar-scanner-3.3.0.1492-windows\bin
+  - use_embedded_jre=true
+  - windir=C:\WINDOWS
+System properties:
+  - awt.toolkit=sun.awt.windows.WToolkit
+  - file.encoding=Cp1252
+  - file.encoding.pkg=sun.io
+  - file.separator=\
+  - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+  - java.awt.headless=true
+  - java.awt.printerjob=sun.awt.windows.WPrinterJob
+  - java.class.path=C:\sonar-scanner-3.3.0.1492-windows\bin\..\lib\sonar-scanner-cli-3.3.0.1492.jar
+  - java.class.version=52.0
+  - java.endorsed.dirs=C:\sonar-scanner-3.3.0.1492-windows\jre\lib\endorsed
+  - java.ext.dirs=C:\sonar-scanner-3.3.0.1492-windows\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+  - java.home=C:\sonar-scanner-3.3.0.1492-windows\jre
+  - java.io.tmpdir=C:\Users\NIJRAJ~1.GEL\AppData\Local\Temp\
+  - java.library.path=C:\sonar-scanner-3.3.0.1492-windows\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Users\Crest\AppData\Local\Programs\Python\Python37-32;C:\Users\Crest\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\nijraj.gelani\AppData\Local\Microsoft\WindowsApps;;.
+  - java.runtime.name=Java(TM) SE Runtime Environment
+  - java.runtime.version=1.8.0_121-b13
+  - java.specification.name=Java Platform API Specification
+  - java.specification.vendor=Oracle Corporation
+  - java.specification.version=1.8
+  - java.vendor=Oracle Corporation
+  - java.vendor.url=http://java.oracle.com/
+  - java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+  - java.version=1.8.0_121
+  - java.vm.info=mixed mode
+  - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+  - java.vm.specification.name=Java Virtual Machine Specification
+  - java.vm.specification.vendor=Oracle Corporation
+  - java.vm.specification.version=1.8
+  - java.vm.vendor=Oracle Corporation
+  - java.vm.version=25.121-b13
+  - line.separator=
+
+  - os.arch=amd64
+  - os.name=Windows 10
+  - os.version=10.0
+  - path.separator=;
+  - project.home=C:\Users\nijraj.gelani\Documents\iglooreloaded
+  - scanner.home=C:\sonar-scanner-3.3.0.1492-windows\bin\..
+  - sun.arch.data.model=64
+  - sun.boot.class.path=C:\sonar-scanner-3.3.0.1492-windows\jre\lib\resources.jar;C:\sonar-scanner-3.3.0.1492-windows\jre\lib\rt.jar;C:\sonar-scanner-3.3.0.1492-windows\jre\lib\sunrsasign.jar;C:\sonar-scanner-3.3.0.1492-windows\jre\lib\jsse.jar;C:\sonar-scanner-3.3.0.1492-windows\jre\lib\jce.jar;C:\sonar-scanner-3.3.0.1492-windows\jre\lib\charsets.jar;C:\sonar-scanner-3.3.0.1492-windows\jre\lib\jfr.jar;C:\sonar-scanner-3.3.0.1492-windows\jre\classes
+  - sun.boot.library.path=C:\sonar-scanner-3.3.0.1492-windows\jre\bin
+  - sun.cpu.endian=little
+  - sun.cpu.isalist=amd64
+  - sun.desktop=windows
+  - sun.io.unicode.encoding=UnicodeLittle
+  - sun.java.command=org.sonarsource.scanner.cli.Main -Dsonar.projectKey=iglooreloaded -Dsonar.sources=src,extension.js -Dsonar.host.url=http://10.0.1.58:9000 -Dsonar.login=b4c1e14226b0d5e84d374a17d9b75a51878c3109 -Dsonar.scm.provider=svn -X
+  - sun.java.launcher=SUN_STANDARD
+  - sun.jnu.encoding=Cp1252
+  - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+  - sun.os.patch.level=
+  - sun.stderr.encoding=cp437
+  - sun.stdout.encoding=cp437
+  - user.country=IN
+  - user.dir=C:\Users\nijraj.gelani\Documents\iglooreloaded
+  - user.home=C:\Users\nijraj.gelani
+  - user.language=en
+  - user.name=nijraj.gelani
+  - user.script=
+  - user.timezone=Asia/Calcutta
+  - user.variant=
+SonarQube plugins:
+  - SonarPython 1.10.0.2131 (python)
+  - SonarCSS 1.0.2.611 (cssfamily)
+  - JaCoCo 1.0.1.143 (jacoco)
+  - SonarGo 1.1.0.1612 (go)
+  - SonarKotlin 1.2.1.2009 (kotlin)
+  - Svn 1.9.0.1295 (scmsvn)
+  - SonarJS 5.0.0.6962 (javascript)
+  - SonarRuby 1.2.1.2009 (ruby)
+  - SonarC# 7.7.0.7192 (csharp)
+  - SonarJava 5.8.0.15699 (java)
+  - LDAP 2.2.0.608 (ldap)
+  - SonarHTML 3.0.1.1444 (web)
+  - Git 1.6.0.1349 (scmgit)
+  - SonarFlex 2.4.0.1222 (flex)
+  - SonarXML 1.5.1.1452 (xml)
+  - SonarPHP 2.14.0.3569 (php)
+  - SonarTS 1.9.0.3766 (typescript)
+  - SonarVB 7.7.0.7192 (vbnet)
+Global properties:
+  - email.from=noreply.sonarqube@crestdatasys.com
+  - email.smtp_host.secured=******
+  - email.smtp_password.secured=******
+  - email.smtp_port.secured=******
+  - email.smtp_secure_connection.secured=******
+  - email.smtp_username.secured=******
+  - sonar.core.id=A7EE8CF2-AWei8st5j0Qt3nwsQKip
+  - sonar.core.serverBaseURL=http://10.0.1.58:9000
+  - sonar.core.startTime=2019-06-19T09:22:24+0530
+Settings for module: iglooreloaded
+  - sonar.host.url=http://10.0.1.58:9000
+  - sonar.login=******
+  - sonar.projectBaseDir=C:\Users\nijraj.gelani\Documents\iglooreloaded
+  - sonar.projectKey=iglooreloaded
+  - sonar.scanner.app=ScannerCli
+  - sonar.scanner.appVersion=3.3.0.1492
+  - sonar.scm.provider=svn
+  - sonar.sourceEncoding=windows-1252
+  - sonar.sources=src,extension.js
+  - sonar.verbose=true
+  - sonar.working.directory=C:\Users\nijraj.gelani\Documents\iglooreloaded\.scannerwork

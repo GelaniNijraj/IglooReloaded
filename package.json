@@ -1,0 +1,83 @@
+{
+	"name": "iglooreloaded",
+	"displayName": "IglooReloaded",
+	"description": "Edit ServiceNow components from VSCode.",
+	"version": "1.0.0",
+	"license": "GPL-3.0-only",
+    "icon": "./data/icon.png",
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/GelaniNijraj/IglooReloaded"
+    },
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:iglooconfig.txt"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.importAll",
+				"title": "IglooReloaded: Import all files from ServiceNow instance"
+			},
+			{
+				"command": "extension.showDifference",
+				"title": "IglooReloaded: Compare local and remote files"
+			},
+			{
+				"command": "extension.importSingle",
+				"title": "IglooReloaded: Import currently open file from ServiceNow instance"
+			},
+			{
+				"command": "extension.exportSingle",
+				"title": "IglooReloaded: Export currently open file to ServiceNow instance"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.importAll",
+				"key": "ctrl+alt+a",
+				"mac": "ctrl+alt+a"
+			},
+			{
+				"command": "extension.showDifference",
+				"key": "ctrl+alt+d",
+				"mac": "ctrl+alt+d"
+			},
+			{
+				"command": "extension.exportSingle",
+				"key": "ctrl+alt+e",
+				"mac": "ctrl+alt+e"
+			},
+			{
+				"command": "extension.importSingle",
+				"key": "ctrl+alt+i",
+				"mac": "ctrl+alt+i"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.37.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"rimraf": "^3.0.0",
+		"simple-git": "^1.124.0",
+		"superagent": "^5.1.0"
+	}
+}
