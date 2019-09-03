@@ -2,7 +2,7 @@
 	"name": "iglooreloaded",
 	"displayName": "IglooReloaded",
 	"description": "Edit ServiceNow components from VSCode.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "GPL-3.0-only",
 	"icon": "data/icon.png",
 	"publisher": "GelaniNijraj",

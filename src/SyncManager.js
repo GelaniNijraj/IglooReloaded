@@ -36,10 +36,11 @@ class SyncManager {
             });
             queries.push(parsedQuery);
         }
-        let rows = await this.snowManager.getAllRows(item.table, queries);
-        rows.map((row) => {
-            var filePath = path.join(rootPath, [row[item.name], item.ext].join('.'));
-            this.register.add(filePath, row, item);
+        this.snowManager.getAllRows(item.table, queries).then((rows) => {
+            rows.map((row) => {
+                var filePath = path.join(rootPath, [row[item.name], item.ext].join('.'));
+                this.register.add(filePath, row, item);
+            });
         });
     }
 
@@ -71,7 +72,7 @@ class SyncManager {
                 else if (subItem.type == 'file')
                     this._createFile(subItem, currentPath, row);
                 else if (subItem.type == 'files')
-                    await this._createFiles(subItem, currentPath, row);
+                    this._createFiles(subItem, currentPath, row);
             }
         }
     }
@@ -82,7 +83,7 @@ class SyncManager {
             fs.mkdirSync(currentPath);
         for(let subItem of item.contains) {
             if (subItem.type == 'files')
-                await this._createFiles(subItem, currentPath, current);
+                this._createFiles(subItem, currentPath, current);
             else if (subItem.type == 'file')
                 this._createFile(subItem, currentPath, current);
             else if (subItem.type == 'directories')
