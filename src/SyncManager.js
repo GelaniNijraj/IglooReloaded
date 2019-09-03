@@ -27,21 +27,28 @@ class SyncManager {
         }
     }
 
-    async _createFiles(item, rootPath, current = null) {
-        var queries = [];
-        if (item.query != undefined) {
-            var parsedQuery = item.query.replace(/\$\{([\w\.]+)\}/g, (match) => {
-                let key = match.substr(2, match.length - 3);
-                return current[key];
+    _createFiles(item, rootPath, current = null) {
+        return new Promise((resolve, reject) => {
+            var queries = [];
+            if (item.query != undefined) {
+                var parsedQuery = item.query.replace(/\$\{([\w\.]+)\}/g, (match) => {
+                    let key = match.substr(2, match.length - 3);
+                    return current[key];
+                });
+                queries.push(parsedQuery);
+            }
+            this.snowManager.getAllRows(item.table, queries).then((rows) => {
+                if (!rows)
+                    return console.error('Could not fetch', item);
+                rows.map((row) => {
+                    var filePath = path.join(rootPath, [row[item.name], item.ext].join('.'));
+                    this.register.add(filePath, row, item);
+                });
+                resolve();
+            }).catch((reason) => {
+                reject(reason);
             });
-            queries.push(parsedQuery);
-        }
-        this.snowManager.getAllRows(item.table, queries).then((rows) => {
-            rows.map((row) => {
-                var filePath = path.join(rootPath, [row[item.name], item.ext].join('.'));
-                this.register.add(filePath, row, item);
-            });
-        });
+        })
     }
 
     _createFile(item, rootPath, current = null) {
@@ -72,7 +79,7 @@ class SyncManager {
                 else if (subItem.type == 'file')
                     this._createFile(subItem, currentPath, row);
                 else if (subItem.type == 'files')
-                    this._createFiles(subItem, currentPath, row);
+                    this.downloading_files.push(this._createFiles(subItem, currentPath, row));
             }
         }
     }
@@ -83,7 +90,7 @@ class SyncManager {
             fs.mkdirSync(currentPath);
         for(let subItem of item.contains) {
             if (subItem.type == 'files')
-                this._createFiles(subItem, currentPath, current);
+                this.downloading_files.push(this._createFiles(subItem, currentPath, current));
             else if (subItem.type == 'file')
                 this._createFile(subItem, currentPath, current);
             else if (subItem.type == 'directories')
@@ -101,15 +108,21 @@ class SyncManager {
                 if (!err) {
                     if (!fs.existsSync(CONSTANTS.OUT_DIR))
                         fs.mkdirSync(CONSTANTS.OUT_DIR);
+                    this.downloading_files = [];
                     for (let item of this.FILE_MAP) {
                         if (item.type == "directory") {
                             await this._createDirectory(item, CONSTANTS.OUT_DIR);
                         }
                     }
-                    this._cleanupEmptyDirectories(CONSTANTS.ROOT_DIR);
-                    this.register.commitFile('.');
-                    vscode.window.setStatusBarMessage('IglooReloaded: Ready');
-                    vscode.window.showInformationMessage('All files imported successfully.');
+                    Promise.all(this.downloading_files).then(() => {
+                        this._cleanupEmptyDirectories(CONSTANTS.ROOT_DIR);
+                        this.register.commitFile('.');
+                        vscode.window.setStatusBarMessage('IglooReloaded: Ready');
+                        vscode.window.showInformationMessage('All files imported successfully.');
+                        return;
+                    }).catch((e) => {
+                        console.error(e);
+                    });
                     return;
                 }
             } catch(e) {
