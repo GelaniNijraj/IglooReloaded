@@ -2,6 +2,15 @@
 
 All notable changes to the IglooReloaded extension will be documented in this file.
 
+## [1.2.1]
+### Added
+- Added autocompletion support
+- Context menu item to open files on the ServiceNow instance
+- Option to export and customize the mappings.json file
+
+### Fixed
+- Fixed a bug where window had to be reloaded after updating the iglooconfig.txt
+
 ## [1.1.1] - 2019-09-03
 ### Fixed
 - Fixed a bug where some files were not getting imported

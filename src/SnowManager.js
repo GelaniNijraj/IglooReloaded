@@ -2,12 +2,7 @@ const HttpClient = require("./HttpClient");
 
 class SnowManager {
     constructor(config){
-        this.config = config;
-        this.http_client = new HttpClient(
-            this.config.url,
-            this.config.username,
-            this.config.password
-        );
+        this.setConfig(config);
     }
 
     getAllRows(tableName, queries = []){
@@ -32,6 +27,15 @@ class SnowManager {
                     reject(err);
                 });
         });
+    }
+
+    setConfig(config) {
+        this.config = config;
+        this.http_client = new HttpClient(
+            this.config.url,
+            this.config.username,
+            this.config.password
+        );
     }
 
     getSingleRow(tableName, sysId){

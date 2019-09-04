@@ -1,4 +1,5 @@
 const fs = require('fs');
+const fsExtra = require('fs-extra');
 const path = require('path');
 const vscode = require('vscode');
 const rimraf = require('rimraf');
@@ -7,10 +8,28 @@ const SnowManager = require('./SnowManager');
 const CONSTANTS = require('./Constants');
 
 class SyncManager {
-    constructor(mappingsFilePath, register) {
+    constructor(register) {
         this.register = register;
-        this.FILE_MAP = JSON.parse(fs.readFileSync(mappingsFilePath).toString());
-        this.snowManager = new SnowManager(JSON.parse(fs.readFileSync(CONSTANTS.CONFIG_PATH)));
+        this.configurationUpdateHandler(JSON.parse(fs.readFileSync(CONSTANTS.CONFIG_PATH)));
+    }
+
+    configurationUpdateHandler(config) {
+        this.snowManager = new SnowManager(config);
+    }
+
+    initialize(typeDefinitionPath) {
+        // initialize the project
+        var fileStream = fs.createWriteStream(CONSTANTS.JSON_CONFIG_PATH);
+        fileStream.write(JSON.stringify({
+            "compilerOptions": {
+                "target": "es5"
+            },
+            "exclude": [
+                "node_modules"
+            ]
+        }, null, 4));
+        fileStream.end();
+        fsExtra.copySync(typeDefinitionPath, CONSTANTS.TYPE_DIR_PATH);
     }
 
     _cleanupEmptyDirectories(dir) {
@@ -100,7 +119,7 @@ class SyncManager {
         }
     }
 
-    async importAll() {
+    async importAll(fileMap) {
         vscode.window.setStatusBarMessage('IglooReloaded: Importing files...');
         vscode.window.showInformationMessage('IglooReloaded: Import has been started.');
         rimraf(CONSTANTS.OUT_DIR, async (err) => {
@@ -109,7 +128,7 @@ class SyncManager {
                     if (!fs.existsSync(CONSTANTS.OUT_DIR))
                         fs.mkdirSync(CONSTANTS.OUT_DIR);
                     this.downloading_files = [];
-                    for (let item of this.FILE_MAP) {
+                    for (let item of fileMap) {
                         if (item.type == "directory") {
                             await this._createDirectory(item, CONSTANTS.OUT_DIR);
                         }

@@ -2,14 +2,14 @@
 	"name": "iglooreloaded",
 	"displayName": "IglooReloaded",
 	"description": "Edit ServiceNow components from VSCode.",
-	"version": "1.1.1",
+	"version": "1.2.1",
 	"license": "GPL-3.0-only",
 	"icon": "data/icon.png",
 	"publisher": "GelaniNijraj",
 	"repository": {
-        "type": "git",
-        "url": "https://github.com/GelaniNijraj/IglooReloaded"
-    },
+		"type": "git",
+		"url": "https://github.com/GelaniNijraj/IglooReloaded"
+	},
 	"engines": {
 		"vscode": "^1.37.0"
 	},
@@ -23,40 +23,56 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.importAll",
+				"command": "iglooreloaded.importAll",
 				"title": "IglooReloaded: Import all files from ServiceNow instance"
 			},
 			{
-				"command": "extension.showDifference",
+				"command": "iglooreloaded.showDifference",
 				"title": "IglooReloaded: Compare local and remote files"
 			},
 			{
-				"command": "extension.importSingle",
+				"command": "iglooreloaded.importSingle",
 				"title": "IglooReloaded: Import currently open file from ServiceNow instance"
 			},
 			{
-				"command": "extension.exportSingle",
+				"command": "iglooreloaded.exportSingle",
 				"title": "IglooReloaded: Export currently open file to ServiceNow instance"
+			},
+			{
+				"command": "iglooreloaded.openOnServiceNow",
+				"title": "IglooReloaded: Open in ServiceNow"
+			},
+			{
+				"command": "iglooreloaded.exportMappings",
+				"title": "IglooReloaded: Create default mappings.json file"
 			}
 		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "iglooreloaded.openOnServiceNow",
+					"group": "YourGroup@1"
+				}
+			]
+		},
 		"keybindings": [
 			{
-				"command": "extension.importAll",
+				"command": "iglooreloaded.importAll",
 				"key": "ctrl+alt+a",
 				"mac": "ctrl+alt+a"
 			},
 			{
-				"command": "extension.showDifference",
+				"command": "iglooreloaded.showDifference",
 				"key": "ctrl+alt+d",
 				"mac": "ctrl+alt+d"
 			},
 			{
-				"command": "extension.exportSingle",
+				"command": "iglooreloaded.exportSingle",
 				"key": "ctrl+alt+e",
 				"mac": "ctrl+alt+e"
 			},
 			{
-				"command": "extension.importSingle",
+				"command": "iglooreloaded.importSingle",
 				"key": "ctrl+alt+i",
 				"mac": "ctrl+alt+i"
 			}
@@ -74,9 +90,11 @@
 		"glob": "^7.1.4",
 		"mocha": "^6.1.4",
 		"typescript": "^3.3.1",
+		"vscode": "^1.1.36",
 		"vscode-test": "^1.0.2"
 	},
 	"dependencies": {
+		"fs-extra": "^8.1.0",
 		"rimraf": "^3.0.0",
 		"simple-git": "^1.124.0",
 		"superagent": "^5.1.0"
