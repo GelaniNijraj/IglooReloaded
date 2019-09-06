@@ -6,6 +6,7 @@ VSCode extension to modify ServiceNow scripts directly from VSCode.
   - [Features](#features)
   - [How-to](#how-to)
     - [Initial configuration](#initial-configuration)
+    - [Opening a file on ServiceNow](#opening-a-file-on-servicenow)
     - [Autocompletions](#autocompletions)
     - [Adding new tables to import from](#adding-new-tables-to-import-from)
     - [Enabling/Disabling local git version tracking](#enablingdisabling-local-git-version-tracking)
@@ -65,6 +66,11 @@ VSCode extension to modify ServiceNow scripts directly from VSCode.
 2. Open the folder in VSCode and wait unitil statusbar displays the message
    `IglooReloaded: Active`.
 3. Press `Ctrl + Alt + a` to fetch all scripts from ServiceNow.
+
+### Opening a file on ServiceNow
+
+Right click in the file in the sidebar and click
+`IglooReloaded: Open in ServiceNow` to view that file on ServiceNow.
 
 ### Autocompletions
 
