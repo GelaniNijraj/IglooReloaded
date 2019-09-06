@@ -277,4 +277,4 @@ class SyncManager {
     }
 }
 
-module.exports = SyncManager;
+export default SyncManager;

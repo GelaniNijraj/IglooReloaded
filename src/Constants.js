@@ -1,7 +1,7 @@
-const vscode = require('vscode');
-const path = require('path');
+import vscode from 'vscode';
+import path from 'path';
 
-module.exports = {
+export default {
     ROOT_DIR: vscode.workspace.rootPath,
     OUT_DIR: path.join(vscode.workspace.rootPath, 'ServiceNow'),
     CONFIG_PATH: path.join(vscode.workspace.rootPath, 'iglooconfig.txt'),

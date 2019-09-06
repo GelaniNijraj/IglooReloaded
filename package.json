@@ -2,7 +2,7 @@
 	"name": "iglooreloaded",
 	"displayName": "IglooReloaded",
 	"description": "Edit ServiceNow components from VSCode.",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"license": "GPL-3.0-only",
 	"icon": "data/icon.png",
 	"publisher": "GelaniNijraj",
@@ -19,7 +19,7 @@
 	"activationEvents": [
 		"workspaceContains:iglooconfig.txt"
 	],
-	"main": "./extension.js",
+	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
@@ -79,7 +79,11 @@
 		]
 	},
 	"scripts": {
-		"test": "node ./test/runTest.js"
+		"test": "node ./test/runTest.js",
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"test-compile": "tsc -p ./"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -91,7 +95,9 @@
 		"mocha": "^6.1.4",
 		"typescript": "^3.3.1",
 		"vscode": "^1.1.36",
-		"vscode-test": "^1.0.2"
+		"vscode-test": "^1.0.2",
+		"webpack": "^4.39.3",
+		"webpack-cli": "^3.3.8"
 	},
 	"dependencies": {
 		"fs-extra": "^8.1.0",

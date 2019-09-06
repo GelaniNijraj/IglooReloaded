@@ -79,4 +79,4 @@ class SnowManager {
     }
 }
 
-module.exports = SnowManager;
+export default SnowManager;

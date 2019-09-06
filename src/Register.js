@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
+// const crypto = require('crypto');
+import crypto from 'crypto';
 const simpleGit = require('simple-git');
 const rimraf = require('rimraf');
 
@@ -131,4 +132,4 @@ class Register {
     }
 }
 
-module.exports = Register;
+export default Register;
