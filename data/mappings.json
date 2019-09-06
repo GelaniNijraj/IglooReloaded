@@ -4,19 +4,6 @@
         "type": "directory",
         "contains": [
             {
-                "name": "Scheduled Scripts",
-                "type": "directory",
-                "contains": [
-                    {
-                        "type": "files",
-                        "ext": "js",
-                        "table": "sysauto_script",
-                        "name": "name",
-                        "content": "script"
-                    }
-                ]
-            },
-            {
                 "name": "Business Rules",
                 "type": "directory",
                 "contains": [
