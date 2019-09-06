@@ -3,6 +3,14 @@
 	"displayName": "IglooReloaded",
 	"description": "Edit ServiceNow components from VSCode.",
 	"version": "1.2.1",
+	"keywords": [
+		"IglooReloaded",
+		"Igloo",
+		"SNOW",
+		"ServiceNow",
+		"ServiceNow Studio",
+		"Autocomplete"
+	],
 	"license": "GPL-3.0-only",
 	"icon": "data/icon.png",
 	"publisher": "GelaniNijraj",
