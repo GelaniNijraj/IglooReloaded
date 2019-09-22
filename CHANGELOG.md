@@ -2,6 +2,10 @@
 
 All notable changes to the IglooReloaded extension will be documented in this file.
 
+## [1.2.3]
+### Fixed
+- Fixed a bug where table=current was causing problems in mappings.json
+
 ## [1.2.1]
 ### Added
 - Added autocompletion support

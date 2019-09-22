@@ -73,8 +73,9 @@ class SyncManager {
     _createFile(item, rootPath, current = null) {
         var filePath = path.join(rootPath, [item.name, item.ext].join('.'));
         if (item.table == 'current') {
-            this.register.add(filePath, current, item);
+            item.table = current.sys_class_name;
         }
+        this.register.add(filePath, current, item);
     }
 
     async _createDirectories(item, rootPath, current = null) {
