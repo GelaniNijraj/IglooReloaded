@@ -104,7 +104,7 @@
 	"dependencies": {
 		"fs-extra": "^8.1.0",
 		"rimraf": "^3.0.0",
-		"simple-git": "^1.124.0",
+		"simple-git": "^3.5.0",
 		"superagent": "^5.1.0"
 	}
 }
